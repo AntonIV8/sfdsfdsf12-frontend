@@ -1,0 +1,80 @@
+﻿{
+  "name": "IISsfdsfdsf12Cat",
+  "modelName": "i-i-s-sfdsfdsf12-cat",
+  "className": "Cat",
+  "nameSpace": "IIS.sfdsfdsf12",
+  "parentModelName": "i-i-s-sfdsfdsf12-animal",
+  "parentClassName": "Animal",
+  "attrs": [
+    {
+      "name": "catName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "paws",
+      "relatedTo": "i-i-s-sfdsfdsf12-paws",
+      "inverse": "cat"
+    }
+  ],
+  "projections": [
+    {
+      "name": "CatE",
+      "modelName": "i-i-s-sfdsfdsf12-cat",
+      "attrs": [
+        {
+          "name": "catName",
+          "caption": "Cat name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "weight",
+          "caption": "Weight",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "PawsE",
+          "caption": "Paws",
+          "name": "paws",
+          "relatedTo": "i-i-s-sfdsfdsf12-paws",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "CatL",
+      "modelName": "i-i-s-sfdsfdsf12-cat",
+      "attrs": [
+        {
+          "name": "catName",
+          "caption": "Cat name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "weight",
+          "caption": "Weight",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
